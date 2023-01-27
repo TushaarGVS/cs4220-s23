@@ -1,12 +1,13 @@
 TEXINPUTS:=.
 
 CLASS_HW=\
-	pdf/2023-01-25-class.pdf
+	pdf/2023-01-25-class.pdf \
+	pdf/2023-01-27-class.pdf
 
 HW=$(CLASS_HW)
 
 .PHONY: all copy
-all: $(LEC)
+all: $(HW)
 
 pdf/%.pdf: tex/%.tex
 	xelatex -output-dir pdf $<
